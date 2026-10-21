@@ -18,7 +18,7 @@ jobs:
         ports:
           - 5432:5432
         options: >-
-          --health-cmd pg_isready -U app -d appdb
+          --health-cmd "pg_isready -U app -d appdb"
           --health-interval 3s
           --health-retries 10
     env:
