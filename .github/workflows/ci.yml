@@ -22,7 +22,7 @@ jobs:
           --health-interval 3s
           --health-retries 10
     env:
-      DATABASE_URL: postgresql://app:secret@localhost:5432/appdb
+      DATABASE_URL: postgresql://app:ci-only-password@localhost:5432/appdb
     steps:
         - uses: actions/checkout@v4
         - uses: actions/setup-python@v5
