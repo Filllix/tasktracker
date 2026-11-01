@@ -5,7 +5,7 @@ resource "kind_cluster" "this" {
 }
 
 resource "kubernetes_namespace_v1" "app" {
-  metadata {
+metadata {
     name = var.namespace
     labels = {
       "app.kubernetes.io/part-of" = "tasktracker"
@@ -14,7 +14,7 @@ resource "kubernetes_namespace_v1" "app" {
 }
 
 resource "kubernetes_secret_v1" "db" {
-  metadata {
+metadata {
     name      = "tasktracker-db"
     namespace = kubernetes_namespace_v1.app.metadata[0].name
   }
