@@ -18,7 +18,7 @@ spec:
         runAsUser: 10001
       containers:
         - name: api
-          image: ghcr.io/filllix/tasktracker:sha-4bbefe4
+          image: ghcr.io/filllix/tasktracker:sha-448616f
           ports:
             - containerPort: 8000
           env:
